@@ -37,9 +37,9 @@ class StringNumValue:
             ord_value = ord(self.s)
             if ord('0') <= ord_value <= ord('9'):
                 return ord_value - ord('0')
-            elif ord('A') <= ord_value <= ord('Z')
+            elif ord('A') <= ord_value <= ord('Z'):
                 return ord_value - ord('A')
-            elif ord('a') <= ord_value <= ord('z')
+            elif ord('a') <= ord_value <= ord('z'):
                 return ord_value - ord('a')
             else:
                 return 0
