@@ -39,6 +39,10 @@ class TestStringNumValue(unittest.TestCase):
     def test_appending_a_single_character_should_return_its_value(self):
         # We use append to add a character to the initially empty string
         pass
+        '''
+        self.uut.append('9')
+        self.assertEqual('9', self.uut)
+        '''
 
     def test_appending_multiple_characters_should_return_combined_value(self):
         pass

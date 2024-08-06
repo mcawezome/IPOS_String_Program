@@ -33,18 +33,19 @@ class StringNumValue:
 
         :return: The numeric value of the string
         """
-        if len(self.s):
+        string_total = 0
+        for i in range(len(self.s)):
             ord_value = ord(self.s)
             if ord('0') <= ord_value <= ord('9'):
-                return ord_value - ord('0')
+                string_total += ord_value - ord('0')
             elif ord('A') <= ord_value <= ord('Z'):
-                return ord_value - ord('A')
+                string_total += ord_value - ord('A')
             elif ord('a') <= ord_value <= ord('z'):
-                return ord_value - ord('a')
+                string_total += ord_value - ord('a')
             else:
-                return 0
-        else:
-            return 0
+                # Do not add to the total
+                pass
+        return string_total
 
     def set(self, s):
         """
