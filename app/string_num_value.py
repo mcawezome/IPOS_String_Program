@@ -33,7 +33,18 @@ class StringNumValue:
 
         :return: The numeric value of the string
         """
-        return ord(self.s) - ord('0') if len(self.s) else 0
+        if len(self.s):
+            ord_value = ord(self.s)
+            if ord('0') <= ord_value <= ord('9'):
+                return ord_value - ord('0')
+            elif ord('A') <= ord_value <= ord('Z')
+                return ord_value - ord('A')
+            elif ord('a') <= ord_value <= ord('z')
+                return ord_value - ord('a')
+            else:
+                return 0
+        else:
+            return 0
 
     def set(self, s):
         """
