@@ -35,7 +35,7 @@ class StringNumValue:
         """
         string_total = 0
         for i in range(len(self.s)):
-            ord_value = ord(self.s)
+            ord_value = ord(self.s[i])
             if ord('0') <= ord_value <= ord('9'):
                 string_total += ord_value - ord('0')
             elif ord('A') <= ord_value <= ord('Z'):
