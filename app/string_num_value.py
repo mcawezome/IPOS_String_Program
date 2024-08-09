@@ -39,9 +39,9 @@ class StringNumValue:
             if ord('0') <= ord_value <= ord('9'):
                 string_total += ord_value - ord('0')
             elif ord('A') <= ord_value <= ord('Z'):
-                string_total += ord_value - ord('A')
+                string_total += ord_value - ord('A') + 1
             elif ord('a') <= ord_value <= ord('z'):
-                string_total += ord_value - ord('a')
+                string_total += ord_value - ord('a') + 1
             else:
                 # Do not add to the total
                 pass
