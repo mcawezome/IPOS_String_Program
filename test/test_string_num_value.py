@@ -41,20 +41,18 @@ class TestStringNumValue(unittest.TestCase):
         self.uut.append('b')
 
         self.assertEqual(2, self.uut.value)
-        pass
 
     def test_appending_multiple_characters_should_return_combined_value(self):
         self.uut.append('c')
         self.uut.append('5')
 
         self.assertEqual(8, self.uut.value)
-        pass
 
     def test_unsupported_characters_should_not_count(self):
         self.uut.append('β')
 
         self.assertEqual(0, self.uut.value)
-        pass
+
 
     def test_what_more_can_you_think_of_to_test(self):
         # Can you come up with another test that you can run?
@@ -62,11 +60,13 @@ class TestStringNumValue(unittest.TestCase):
         self.uut.set('3xampl3')
 
         self.assertEqual(3 + 24 + 1 + 13 + 16 + 12 + 3, self.uut.value)
-        pass
+
 
     def test_new_functionality_that_you_invented_for_this_uut(self):
         # You could implement the __str__ method and test that?
-        pass
+        string_num_value_object = StringNumValue("Hello")
+        expected_str = f"StringNumValue with string Hello and value of {8+5+12+12+15}"
+        self.assertEqual(str(string_num_value_object), expected_str)
 
 
 if __name__ == '__main__':

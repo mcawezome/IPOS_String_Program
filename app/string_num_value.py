@@ -62,3 +62,10 @@ class StringNumValue:
         :param a: String to append
         """
         self.s += a
+
+    def __str__(self):
+        """
+        Outputs a string with the contents of the sting contained in the object and its value.
+        :return: formatted string to print
+        """
+        return f"StringNumValue with string {self.s} and value of {self.value}"
