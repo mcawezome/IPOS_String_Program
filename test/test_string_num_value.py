@@ -62,10 +62,12 @@ class TestStringNumValue(unittest.TestCase):
         self.assertEqual(3 + 24 + 1 + 13 + 16 + 12 + 3, self.uut.value)
 
 
+
     def test_new_functionality_that_you_invented_for_this_uut(self):
         # You could implement the __str__ method and test that?
         string_num_value_object = StringNumValue("Hello")
         expected_str = f"StringNumValue with string Hello and value of {8+5+12+12+15}"
+
         self.assertEqual(str(string_num_value_object), expected_str)
 
 

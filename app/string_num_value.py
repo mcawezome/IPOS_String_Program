@@ -34,9 +34,12 @@ class StringNumValue:
         :return: The numeric value of the string
         """
         string_total = 0
+        # iterate over characters in the string. Does not enter loop if length is 0.
         for i in range(len(self.s)):
             ord_value = ord(self.s[i])
+            # if the ordinal value is in the appropriate section
             if ord('0') <= ord_value <= ord('9'):
+                # Only adds the difference between the ordinal value and the lowest character in the set.
                 string_total += ord_value - ord('0')
             elif ord('A') <= ord_value <= ord('Z'):
                 string_total += ord_value - ord('A') + 1
